@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="esantacruzT2.Views.sistemaCalificaciones"
+             Title="sistemaCalificaciones">
+    <StackLayout
+        Spacing="10"
+        Padding="20"
+
+        >
+        <Label 
+    Text="SISTEMA DE CALIFICACIONES UISRAEL"
+    FontSize="20"
+    HorizontalTextAlignment="Center"
+    TextColor="Blue"/>
+
+        <Label
+    Text="SELECCIONE UN ESTUDIANTE:"
+    TextColor="Blue"
+    >
+        </Label>
+        <Picker x:Name="pkeEstudiantes">
+            <Picker.Items>
+                <x:String>Edison Santacruz</x:String>
+                <x:String>Josue Maldonado</x:String>
+                <x:String>Sandra Lozano</x:String>
+                <x:String>Mayra Valencia</x:String>
+                <x:String>Victor Sanchez</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label
+            Text="NOTA PARCIAL: 1"
+            TextColor="Blue"
+            >            
+        </Label>
+       <Entry x:Name="txtSeguimiento1"
+       Placeholder="Ingese Nota de seguimiento 1"
+       Keyboard="Numeric"
+       MaxLength="3"
+        />
+        <Label
+       Text="EXAMEN: 1"
+       TextColor="Blue"
+       />
+
+        <Entry x:Name="txtExamen1"
+        Placeholder="Ingrese Nota de Examen 1"
+        Keyboard="Numeric"
+        MaxLength="3"
+            
+        />
+
+        <Label
+       Text="NOTA PARCIAL: 2"
+       TextColor="Blue"
+       >
+        </Label>
+        <Entry x:Name="txtSeguimiento2"
+        Placeholder="Ingese Nota de seguimiento 2"
+        Keyboard="Numeric"
+        MaxLength="3"
+            
+        />
+        <Label
+        Text="EXAMEN: 2"
+        TextColor="Blue"
+        />
+
+        <Entry x:Name="txtExamen2"
+        Placeholder="Ingrese Nota de Examen 2"
+        Keyboard="Numeric"
+        MaxLength="3"
+        />
+        
+        <Label
+        Text="SELECCIONE UNA FECHA:"
+        TextColor="Blue"
+        />
+        
+        <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy">
+        </DatePicker>
+
+        <Button x:Name="btnCalcular"
+        Text="Calcular"
+        Clicked="btnCalcular_Clicked"  
+        />
+        <Button x:Name="btnLimpiar" Text="Limpiar Datos" Clicked="btnLimpiar_Clicked"/>
+    </StackLayout>
+</ContentPage>
