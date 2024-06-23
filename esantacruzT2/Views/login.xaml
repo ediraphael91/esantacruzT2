@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="esantacruzT2.Views.login"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="login">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="INICIO DE SESIÓN"
+            TextColor="blue" />
+        <Image Source="login.png" WidthRequest="100" />
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="USUARIO" />
+            <Entry
+                x:Name="txtUsuario"
+                Grid.Row="0"
+                Grid.Column="1"
+                Placeholder="Ingrese el usuario" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="18"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="CONTRASEÑA" />
+            <Entry
+                x:Name="txtContraseña"
+                Grid.Row="1"
+                Grid.Column="1"
+                IsPassword="True"
+                Placeholder="Ingrese la contraseña" />
+
+            <Label
+                x:Name="resultLabel"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="" />
+        </Grid>
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Clicked="OnLoginButtonClicked"
+            Text="Iniciar Sesión" />
+    </VerticalStackLayout>
+</ContentPage>

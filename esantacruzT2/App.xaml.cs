@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Views.sistemaCalificaciones();
+            MainPage = new NavigationPage(new Views.login());
         }
     }
 }

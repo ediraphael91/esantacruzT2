@@ -4,9 +4,11 @@ namespace esantacruzT2.Views;
 
 public partial class sistemaCalificaciones : ContentPage
 {
-    public sistemaCalificaciones()
+    public sistemaCalificaciones(string nombreUsuario)
     {
         InitializeComponent();
+        lblUsuarioConectado.Text = $"Bienvenido : {nombreUsuario}";
+
     }
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
